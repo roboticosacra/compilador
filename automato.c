@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+//teste de mudança de arquivo
+
 char olhar; /* O caracter lido "antecipadamente" (olha adiante) */
 
 
