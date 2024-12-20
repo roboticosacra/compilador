@@ -1,13 +1,48 @@
+/*
+
+Construção de um analizador lexico que reconhece identificadores, literais numericas
+e strings e comentarios.
+
+Alunos: Hugo Santos Dias
+        Jeane Durval
+
+Obs: compilado e testado no devc++ 4.9.9.2 rodando o gcc 3.4.2 e  no gcc 3.4.4 no FreeBSD
+
+Saidas esperadas:
+
+       automato.exe
+       Entre com os dados
+       123455
+       numeros
+
+       automato.exe
+       Entre com os dados
+       12abc
+       literais numericos
+
+       automato.exe
+       Entre com os dados
+       abcdf
+       caracteres
+
+       automato.exe
+       Entre com os dados
+       (** comentarios **)
+       comentarios
+
+
+
+Este código é de livre distribuição e uso.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
-//teste de mudanÃ§a de arquivo
-
 char olhar; /* O caracter lido "antecipadamente" (olha adiante) */
 
 
-/* protï¿½tipos */
+/* protótipos */
 void init();
 void proximoChar();
 void error(char *fmt, ...);
@@ -34,13 +69,13 @@ int main()
 	return 0;
 }
 
-/* inicializaï¿½ï¿½o do compilador */
+/* inicialização do compilador */
 void init()
 {
 	proximoChar();
 }
 
-/* lï¿½ prï¿½ximo caracter da entrada */
+/* lê próximo caracter da entrada */
 void proximoChar()
 {
 	olhar = getchar();
@@ -115,7 +150,7 @@ char getNome()
 	return name;
 }
 
-/* recebe um nï¿½mero inteiro */
+/* recebe um número inteiro */
 char getNum()
 {
 	char num;
@@ -128,7 +163,7 @@ char getNum()
 	return num;
 }
 
-/* emite uma instruï¿½ï¿½o seguida por uma nova linha */
+/* emite uma instrução seguida por uma nova linha */
 void emit(char *fmt, ...)
 {
 	va_list args;
@@ -153,3 +188,6 @@ int letra (char letra)
 
 int i=1; //primeiro estado do automato
 
+
+//chamada do aumtomato
+void Àr
